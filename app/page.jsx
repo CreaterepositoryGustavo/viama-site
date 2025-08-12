@@ -15,10 +15,10 @@ export default function Page() {
   return (
     <div className="min-h-screen text-gray-900">
       {/* NAVBAR */}
+{/* NAVBAR */}
 <header className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b">
   <div className="max-w-6xl mx-auto px-4 py-2 md:py-3 flex items-center justify-between">
     <a href="#inicio" className="flex items-center">
-      {/* Truco: margen negativo para que el logo salga un poquito y la barra no sea tan alta */}
       <div className="-my-2 md:-my-3">
         <Image
           src="/logo.png"
@@ -40,13 +40,14 @@ export default function Page() {
 
     <div className="hidden md:flex items-center">
       <a href="#contacto">
-        <Button className="rounded-xl bg-sky-600 hover:bg-sky-700 text-white px-5 py-2.5 text-sm md:text-base">
+        <Button className="rounded-xl bg-sky-600 hover:bg-sky-700 text-white px-5 py-2.5 text-base">
           Pedí tu cotización
         </Button>
       </a>
     </div>
   </div>
 </header>
+
 
 
       <section id="inicio" className="relative overflow-hidden">
