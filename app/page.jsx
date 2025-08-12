@@ -16,9 +16,16 @@ export default function Page() {
     <div className="min-h-screen text-gray-900">
       <header className="sticky top-0 z-50 backdrop-blur bg-white/80 border-b border-sky-200">
         <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-          <a href="#inicio" className="flex items-center gap-2 font-semibold text-xl text-sky-700">
-            <Image src="/logo.png" alt="Viama Viajes y Turismo" width={40} height={40} className="rounded" />
-            <span>Viama Viajes y Turismo</span>
+          <a href="#inicio" className="flex items-center gap-3">
+  <Image
+    src="/logo.png"
+    alt="Viama Viajes y Turismo"
+    width={120}
+    height={120}
+    priority
+  />
+</a>
+
           </a>
           <nav className="hidden md:flex items-center gap-6 text-sm text-sky-800">
             <a href="#servicios" className="hover:text-sky-600">Servicios</a>
