@@ -1,0 +1,2 @@
+import React from 'react';
+export function Button({ className = '', variant, size, ...props }) {const base="inline-flex items-center justify-center font-medium transition-colors focus:outline-none rounded-md";const sizing=size==='lg'?'px-5 py-3 text-base':'px-4 py-2 text-sm';const styles=variant==='outline'?'border bg-transparent':'';return <button className={`${base} ${sizing} ${styles} ${className}`} {...props} />;}
