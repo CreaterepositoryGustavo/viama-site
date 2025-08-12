@@ -15,19 +15,22 @@ export default function Page() {
   return (
     <div className="min-h-screen text-gray-900">
       {/* NAVBAR */}
-<header className="sticky top-0 z-50 backdrop-blur bg-white/80 border-b border-sky-200">
-  <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-    <a href="#inicio" className="flex items-center gap-3">
-      <Image
-        src="/logo.png"
-        alt="Viama Viajes y Turismo"
-        width={200}
-        height={200}
-        priority
-      />
+<header className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b">
+  <div className="max-w-6xl mx-auto px-4 py-2 md:py-3 flex items-center justify-between">
+    <a href="#inicio" className="flex items-center">
+      {/* Truco: margen negativo para que el logo salga un poquito y la barra no sea tan alta */}
+      <div className="-my-2 md:-my-3">
+        <Image
+          src="/logo.png"
+          alt="Viama Viajes y Turismo"
+          width={120}
+          height={120}
+          priority
+        />
+      </div>
     </a>
 
-    <nav className="hidden md:flex items-center gap-6 text-sm text-sky-800">
+    <nav className="hidden md:flex items-center gap-6 md:gap-8 text-base md:text-lg font-medium text-sky-800">
       <a href="#servicios" className="hover:text-sky-600">Servicios</a>
       <a href="#destinos" className="hover:text-sky-600">Destinos</a>
       <a href="#nosotros" className="hover:text-sky-600">Nosotros</a>
@@ -35,9 +38,9 @@ export default function Page() {
       <a href="#contacto" className="hover:text-sky-600">Contacto</a>
     </nav>
 
-    <div className="hidden md:flex items-center gap-3">
+    <div className="hidden md:flex items-center">
       <a href="#contacto">
-        <Button className="rounded-2xl bg-sky-600 hover:bg-sky-700 text-white">
+        <Button className="rounded-xl bg-sky-600 hover:bg-sky-700 text-white px-5 py-2.5 text-sm md:text-base">
           Pedí tu cotización
         </Button>
       </a>
