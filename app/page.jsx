@@ -16,10 +16,12 @@ export default function Page() {
     <div className="min-h-screen text-gray-900">
       {/* NAVBAR */}
 {/* NAVBAR */}
+{/* NAVBAR */}
 <header className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b">
-  <div className="max-w-6xl mx-auto px-4 py-2 md:py-3 flex items-center justify-between">
+  <div className="max-w-6xl mx-auto px-4 py-1 md:py-2 flex items-center justify-between">
+    {/* Logo grande, pero sin engordar la barra */}
     <a href="#inicio" className="flex items-center">
-      <div className="-my-2 md:-my-3">
+      <div className="-my-4 md:-my-5">
         <Image
           src="/logo.png"
           alt="Viama Viajes y Turismo"
@@ -30,7 +32,8 @@ export default function Page() {
       </div>
     </a>
 
-    <nav className="hidden md:flex items-center gap-6 md:gap-8 text-base md:text-lg font-medium text-sky-800">
+    {/* Menú más grande y con más aire */}
+    <nav className="hidden md:flex items-center gap-8 md:gap-10 text-lg md:text-xl font-medium text-sky-800 tracking-wide">
       <a href="#servicios" className="hover:text-sky-600">Servicios</a>
       <a href="#destinos" className="hover:text-sky-600">Destinos</a>
       <a href="#nosotros" className="hover:text-sky-600">Nosotros</a>
@@ -38,15 +41,17 @@ export default function Page() {
       <a href="#contacto" className="hover:text-sky-600">Contacto</a>
     </nav>
 
+    {/* Botón acorde al logo */}
     <div className="hidden md:flex items-center">
       <a href="#contacto">
-        <Button className="rounded-xl bg-sky-600 hover:bg-sky-700 text-white px-5 py-2.5 text-base">
+        <Button className="rounded-2xl bg-sky-600 hover:bg-sky-700 text-white px-6 py-3 text-lg">
           Pedí tu cotización
         </Button>
       </a>
     </div>
   </div>
 </header>
+
 
 
 
