@@ -16,44 +16,22 @@ export default function Page() {
     <div className="min-h-screen text-gray-900">
       {/* NAVBAR */}
 {/* NAVBAR */}
-{/* NAVBAR */}
-<header className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b">
-  <div className="max-w-6xl mx-auto px-4 py-1 md:py-2 flex items-center justify-between">
-    {/* Logo grande, pero sin engordar la barra */}
-    <a href="#inicio" className="flex items-center">
-      <div className="-my-4 md:-my-5">
-        <Image
-          src="/logo.png"
-          alt="Viama Viajes y Turismo"
-          width={120}
-          height={120}
-          priority
-        />
-      </div>
+<header className="fixed top-0 left-0 w-full z-50 bg-transparent shadow-none">
+  <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
+    <a href="/" className="flex items-center gap-3">
+      <img
+        src="/logo.png"
+        alt="Viama Viajes y Turismo"
+        className="h-24 w-auto" // Cambia h-24 a h-28 si lo querés más grande
+      />
     </a>
-
-    {/* Menú más grande y con más aire */}
-    <nav className="hidden md:flex items-center gap-8 md:gap-10 text-lg md:text-xl font-medium text-sky-800 tracking-wide">
+    <nav className="hidden md:flex items-center gap-8 text-lg text-sky-800 font-medium">
       <a href="#servicios" className="hover:text-sky-600">Servicios</a>
       <a href="#destinos" className="hover:text-sky-600">Destinos</a>
-      <a href="#nosotros" className="hover:text-sky-600">Nosotros</a>
-      <a href="#testimonios" className="hover:text-sky-600">Opiniones</a>
       <a href="#contacto" className="hover:text-sky-600">Contacto</a>
     </nav>
-
-    {/* Botón acorde al logo */}
-    <div className="hidden md:flex items-center">
-      <a href="#contacto">
-        <Button className="rounded-2xl bg-sky-600 hover:bg-sky-700 text-white px-6 py-3 text-lg">
-          Pedí tu cotización
-        </Button>
-      </a>
-    </div>
   </div>
 </header>
-
-
-
 
       <section id="inicio" className="relative overflow-hidden">
         <div className="absolute inset-0 -z-10 bg-gradient-to-br from-sky-100 via-white to-blue-100" />
