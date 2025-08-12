@@ -5,10 +5,10 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
-import { Plane, Phone, Mail, MapPin, ArrowRight, ShieldCheck, Star, Instagram, Whatsapp } from "lucide-react";
+import { Plane, Phone, Mail, MapPin, ArrowRight, ShieldCheck, Star, Instagram } from "lucide-react";
 import Image from "next/image";
 
-const whatsappLink = "https://wa.me/5493412715621?text=Hola%20Viama%2C%20quiero%20una%20cotizaci%C3%B3n%20desde%20la%20web";
+const PhoneLink = "https://wa.me/5493412715621?text=Hola%20Viama%2C%20quiero%20una%20cotizaci%C3%B3n%20desde%20la%20web";
 const instagramLink = "https://instagram.com/viama.viajes";
 
 export default function Page() {
@@ -47,7 +47,7 @@ export default function Page() {
             <div className="flex flex-wrap gap-3">
               <a href="#contacto"><Button size="lg" className="rounded-2xl bg-sky-600 hover:bg-sky-700 text-white">Quiero mi propuesta <ArrowRight className="ml-2 h-4 w-4" /></Button></a>
               <a href="#servicios"><Button variant="outline" size="lg" className="rounded-2xl border-sky-600 text-sky-700 hover:bg-sky-50">Ver servicios</Button></a>
-              <a href={whatsappLink} target="_blank" rel="noreferrer"><Button variant="outline" size="lg" className="rounded-2xl border-green-500 text-green-600 hover:bg-green-50 inline-flex items-center gap-2"><Whatsapp className="h-4 w-4"/> WhatsApp</Button></a>
+              <a href={PhoneLink} target="_blank" rel="noreferrer"><Button variant="outline" size="lg" className="rounded-2xl border-green-500 text-green-600 hover:bg-green-50 inline-flex items-center gap-2"><Phone className="h-4 w-4"/> Phone</Button></a>
             </div>
           </div>
         </div>
@@ -104,7 +104,7 @@ export default function Page() {
             <ul className="space-y-3 text-gray-700">
               <li className="flex items-start gap-2"><ShieldCheck className="h-5 w-5 mt-1"/> Atención humana y cercana.</li>
               <li className="flex items-start gap-2"><ShieldCheck className="h-5 w-5 mt-1"/> Opciones claras y comparables, vos decidís.</li>
-              <li className="flex items-start gap-2"><ShieldCheck className="h-5 w-5 mt-1"/> Acompañamiento durante el viaje por WhatsApp.</li>
+              <li className="flex items-start gap-2"><ShieldCheck className="h-5 w-5 mt-1"/> Acompañamiento durante el viaje por Phone.</li>
             </ul>
           </div>
         </div>
@@ -132,13 +132,13 @@ export default function Page() {
             <h2 className="text-3xl md:text-4xl font-bold mb-2 text-sky-800">Contacto</h2>
             <p className="text-gray-600 mb-6">Contanos tu idea y te enviamos una propuesta en menos de 24 horas hábiles.</p>
             <div className="space-y-3 text-gray-700">
-              <p className="inline-flex items-center gap-2"><Phone className="h-5 w-5"/> +54 9 341 271 5621 (WhatsApp)</p>
+              <p className="inline-flex items-center gap-2"><Phone className="h-5 w-5"/> +54 9 341 271 5621 (Phone)</p>
               <p className="inline-flex items-center gap-2"><Mail className="h-5 w-5"/> contacto@viamaviajes.com.ar</p>
               <p className="inline-flex items-center gap-2"><MapPin className="h-5 w-5"/> Gruning Rosas 9124 - Rosario - Santa Fe - Argentina</p>
               <p className="inline-flex items-center gap-2"><Instagram className="h-5 w-5"/> <a href={instagramLink} target="_blank" rel="noreferrer" className="underline">@viama.viajes</a></p>
               <div className="pt-2">
-                <a href={whatsappLink} target="_blank" rel="noreferrer">
-                  <Button className="rounded-2xl inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white"><Whatsapp className="h-4 w-4"/> Escribinos por WhatsApp</Button>
+                <a href={PhoneLink} target="_blank" rel="noreferrer">
+                  <Button className="rounded-2xl inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white"><Phone className="h-4 w-4"/> Escribinos por Phone</Button>
                 </a>
               </div>
             </div>
