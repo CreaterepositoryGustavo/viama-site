@@ -15,21 +15,35 @@ export default function Page() {
   return (
     <div className="min-h-screen text-gray-900">
       {/* NAVBAR */}
-{/* NAVBAR */}
-<header className="fixed top-0 left-0 w-full z-50 bg-transparent shadow-none">
-  <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
-    <a href="/" className="flex items-center gap-3">
-      <img
+<header className="sticky top-0 z-50 bg-transparent border-b border-sky-200">
+  <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+    <a href="#inicio" className="flex items-center gap-2">
+      <Image
         src="/logo.png"
         alt="Viama Viajes y Turismo"
-        className="h-24 w-auto" // Cambia h-24 a h-28 si lo querés más grande
+        width={160}   // ← solo agrandamos el logo
+        height={160}
+        priority
       />
     </a>
-    <nav className="hidden md:flex items-center gap-8 text-lg text-sky-800 font-medium">
+
+    {/* Menú: NO lo tocamos */}
+    <nav className="hidden md:flex items-center gap-6 text-sm text-sky-800">
       <a href="#servicios" className="hover:text-sky-600">Servicios</a>
       <a href="#destinos" className="hover:text-sky-600">Destinos</a>
+      <a href="#nosotros" className="hover:text-sky-600">Nosotros</a>
+      <a href="#testimonios" className="hover:text-sky-600">Opiniones</a>
       <a href="#contacto" className="hover:text-sky-600">Contacto</a>
     </nav>
+
+    {/* Botón: NO lo tocamos */}
+    <div className="hidden md:flex items-center gap-3">
+      <a href="#contacto">
+        <Button className="rounded-2xl bg-sky-600 hover:bg-sky-700 text-white">
+          Pedí tu cotización
+        </Button>
+      </a>
+    </div>
   </div>
 </header>
 
