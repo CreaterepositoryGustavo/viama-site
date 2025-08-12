@@ -14,31 +14,37 @@ const instagramLink = "https://instagram.com/viama.viajes";
 export default function Page() {
   return (
     <div className="min-h-screen text-gray-900">
-      <header className="sticky top-0 z-50 backdrop-blur bg-white/80 border-b border-sky-200">
-        <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-          <a href="#inicio" className="flex items-center gap-3">
-  <Image
-    src="/logo.png"
-    alt="Viama Viajes y Turismo"
-    width={120}
-    height={120}
-    priority
-  />
-</a>
+      {/* NAVBAR */}
+<header className="sticky top-0 z-50 backdrop-blur bg-white/80 border-b border-sky-200">
+  <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+    <a href="#inicio" className="flex items-center gap-3">
+      <Image
+        src="/logo.png"
+        alt="Viama Viajes y Turismo"
+        width={100}
+        height={100}
+        priority
+      />
+    </a>
 
-          </a>
-          <nav className="hidden md:flex items-center gap-6 text-sm text-sky-800">
-            <a href="#servicios" className="hover:text-sky-600">Servicios</a>
-            <a href="#destinos" className="hover:text-sky-600">Destinos</a>
-            <a href="#nosotros" className="hover:text-sky-600">Nosotros</a>
-            <a href="#testimonios" className="hover:text-sky-600">Opiniones</a>
-            <a href="#contacto" className="hover:text-sky-600">Contacto</a>
-          </nav>
-          <div className="hidden md:flex items-center gap-3">
-            <a href="#contacto"><Button className="rounded-2xl bg-sky-600 hover:bg-sky-700 text-white">Pedí tu cotización</Button></a>
-          </div>
-        </div>
-      </header>
+    <nav className="hidden md:flex items-center gap-6 text-sm text-sky-800">
+      <a href="#servicios" className="hover:text-sky-600">Servicios</a>
+      <a href="#destinos" className="hover:text-sky-600">Destinos</a>
+      <a href="#nosotros" className="hover:text-sky-600">Nosotros</a>
+      <a href="#testimonios" className="hover:text-sky-600">Opiniones</a>
+      <a href="#contacto" className="hover:text-sky-600">Contacto</a>
+    </nav>
+
+    <div className="hidden md:flex items-center gap-3">
+      <a href="#contacto">
+        <Button className="rounded-2xl bg-sky-600 hover:bg-sky-700 text-white">
+          Pedí tu cotización
+        </Button>
+      </a>
+    </div>
+  </div>
+</header>
+
 
       <section id="inicio" className="relative overflow-hidden">
         <div className="absolute inset-0 -z-10 bg-gradient-to-br from-sky-100 via-white to-blue-100" />
