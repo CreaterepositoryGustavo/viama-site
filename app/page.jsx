@@ -1,3 +1,10 @@
+// === Carrusel: imágenes ===
+const slides = [
+  "/slide1.jpg", // tu foto tropical (colocada en /public/slide1.jpg)
+  "/slide2.jpg", // tu foto del globo (colocada en /public/slide2.jpg)
+  "https://images.unsplash.com/photo-1482192505345-5655af888cc4?q=80&w=1920&auto=format&fit=crop", // montaña/lago (Unsplash)
+];
+
 'use client';
 import React from "react";
 import { Button } from "@/components/ui/button";
@@ -47,25 +54,47 @@ export default function Page() {
   </div>
 </header>
 
-      <section id="inicio" className="relative overflow-hidden">
-        <div className="absolute inset-0 -z-10 bg-gradient-to-br from-sky-100 via-white to-blue-100" />
-        <div className="max-w-6xl mx-auto px-4 py-20 grid lg:grid-cols-2 gap-10 items-center">
-          <div>
-            <Badge className="mb-4 rounded-full px-3 py-1 bg-sky-100 text-sky-700">Te ayudamos a vivir experiencias</Badge>
-            <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-4 text-sky-800">
-              Viajar bien es viajar <span className="text-sky-600">con nosotros</span>
-            </h1>
-            <p className="text-gray-600 mb-6 max-w-prose">
-              En Viama Viajes y Turismo trabajamos con reservas seguras, asesoramiento real y acompañamiento antes, durante y después de tu viaje. Atención personalizada y propuestas a medida.
-            </p>
-            <div className="flex flex-wrap gap-3">
-              <a href="#contacto"><Button size="lg" className="rounded-2xl bg-sky-600 hover:bg-sky-700 text-white">Quiero mi propuesta <ArrowRight className="ml-2 h-4 w-4" /></Button></a>
-              <a href="#servicios"><Button variant="outline" size="lg" className="rounded-2xl border-sky-600 text-sky-700 hover:bg-sky-50">Ver servicios</Button></a>
-              <a href={PhoneLink} target="_blank" rel="noreferrer"><Button variant="outline" size="lg" className="rounded-2xl border-green-500 text-green-600 hover:bg-green-50 inline-flex items-center gap-2"><Phone className="h-4 w-4"/> Phone</Button></a>
-            </div>
-          </div>
-        </div>
-      </section>
+      <section id="inicio" className="relative w-full h-[600px] overflow-hidden">
+  {/* Carrusel */}
+  <div className="absolute inset-0">
+    <div className="w-full h-full animate-slideShow flex">
+      {[
+        "/slide1.jpg", // Foto tropical
+        "/slide2.jpg", // Globo/aventura
+        "https://images.unsplash.com/photo-1482192505345-5655af888cc4?q=80&w=1920&auto=format&fit=crop" // Montaña/lago
+      ].map((src, index) => (
+        <img
+          key={index}
+          src={src}
+          alt={`Slide ${index + 1}`}
+          className="w-full h-full object-cover flex-shrink-0"
+        />
+      ))}
+    </div>
+  </div>
+
+  {/* Texto sobre el carrusel */}
+  <div className="relative z-10 flex flex-col items-start justify-center h-full px-8 bg-black/40 text-white">
+    <span className="bg-blue-600 px-3 py-1 rounded-full text-sm mb-4">
+      Te ayudamos a vivir experiencias
+    </span>
+    <h1 className="text-5xl font-bold mb-4">
+      Viajar bien es viajar <span className="text-blue-400">con nosotros</span>
+    </h1>
+    <p className="text-lg max-w-2xl mb-6">
+      En Viamia Viajes y Turismo trabajamos con reservas seguras, asesoramiento real y acompañamiento antes, durante y después de tu viaje. Atención personalizada y propuestas a medida.
+    </p>
+    <div className="flex space-x-4">
+      <a href="#contacto" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg shadow-lg">
+        Quiero mi propuesta →
+      </a>
+      <a href="#servicios" className="border border-white hover:bg-white hover:text-blue-600 px-6 py-3 rounded-lg shadow-lg">
+        Ver servicios
+      </a>
+    </div>
+  </div>
+</section>
+
 
       <section id="servicios" className="py-16">
         <div className="max-w-6xl mx-auto px-4">
