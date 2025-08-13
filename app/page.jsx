@@ -63,64 +63,52 @@ export default function Page() {
 </header>
 
       {/* HERO con carrusel (fade entre imágenes) */}
-<section id="inicio" className="relative overflow-hidden">
-  <div className="relative h-[72vh] md:h-[78vh]">
-    {/* Slides como fondo con fade */}
+<section id="inicio" className="relative w-full h-[600px] overflow-hidden">
+  {/* Carrusel */}
+  <div className="absolute inset-0">
     {slides.map((src, i) => (
       <img
         key={src}
         src={src}
-        alt=""
-        aria-hidden="true"
-        className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ${idx === i ? 'opacity-100' : 'opacity-0'}`}
+        alt={`Slide ${i + 1}`}
+        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${
+          idx === i ? "opacity-100" : "opacity-0"
+        }`}
         decoding="async"
-        loading={i === 0 ? 'eager' : 'lazy'}
+        loading={i === 0 ? "eager" : "lazy"}
       />
     ))}
+  </div>
 
-   
-    {/* Texto y botones encima (mismo contenido que venías usando) */}
-    <div className="relative z-10 max-w-6xl mx-auto px-4 py-12 md:py-16 grid lg:grid-cols-2 gap-10 items-center h-full text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.6)]">
-      <div className="self-center">
-         <span className="inline-block mb-4 rounded-full px-3 py-1 bg-white/25 text-white border border-white/40 text-sm">
-          Te ayudamos a vivir experiencias
-        </span>
-        <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-4 text-white">
-          Viajar bien es viajar <span className="text-sky-600">con nosotros</span>
-        </h1>
-       <div className="relative z-10">
-  <div className="absolute inset-0 -left-4 -right-4 bg-gradient-to-r from-black/40 to-transparent pointer-events-none rounded-2xl" />
-        <p className="text-white/95 mb-6 max-w-prose">
-          En Viama Viajes y Turismo trabajamos con reservas seguras, asesoramiento real y
-          acompañamiento antes, durante y después de tu viaje. Atención personalizada y
-          propuestas a medida.
-        </p>
-        <div className="flex flex-wrap gap-3">
-          <a href="#contacto">
-            <Button size="lg" className="rounded-2xl bg-sky-600 hover:bg-sky-700 text-white">
-              Quiero mi propuesta <span className="ml-2">→</span>
-            </Button>
-          </a>
-          <a href="#servicios">
-            <Button variant="outline" size="lg" className="rounded-2xl border-white text-white hover:bg-white/10">
-              Ver servicios
-            </Button>
-          </a>
-          <a
-            href="https://wa.me/5493412715621?text=Hola%20Viama%2C%20quiero%20una%20cotizaci%C3%B3n%20desde%20la%20web"
-            target="_blank"
-            rel="noreferrer"
-          >
-            + <Button variant="outline" size="lg" className="rounded-2xl border-white text-white hover:bg-white/10">
-              WhatsApp
-            </Button>
-          </a>
-        </div>
+  {/* Texto sobre el carrusel */}
+  <div className="relative z-10 flex flex-col items-start justify-center h-full px-8">
+    {/* Degradado detrás del texto */}
+    <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/30 to-transparent pointer-events-none z-0" />
+
+    {/* Contenido */}
+    <div className="relative z-10 max-w-2xl">
+      <span className="bg-blue-600 px-3 py-1 rounded-full text-sm mb-4">
+        Te ayudamos a vivir experiencias
+      </span>
+      <h1 className="text-5xl font-bold mb-4 text-white">
+        Viajar bien es viajar <span className="text-blue-300">con nosotros</span>
+      </h1>
+      <p className="text-white/95 mb-6 max-w-prose">
+        En Viama Viajes y Turismo trabajamos con reservas seguras, asesoramiento real y
+        acompañamiento antes, durante y después de tu viaje. Atención personalizada y
+        propuestas a medida.
+      </p>
+      <div className="flex space-x-4">
+        <a href="#contacto" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg shadow-lg">
+          Quiero mi propuesta →
+        </a>
+        <a href="#servicios" className="border border-white hover:bg-white hover:text-blue-600 px-6 py-3 rounded-lg shadow-lg">
+          Ver servicios
+        </a>
       </div>
     </div>
   </div>
 </section>
-
 
 
       <section id="servicios" className="py-16">
