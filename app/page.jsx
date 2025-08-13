@@ -78,19 +78,17 @@ export default function Page() {
       />
     ))}
 
-    {/* Degradado suave para legibilidad del texto */}
-    <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-white/60 to-white/30" />
-
+   
     {/* Texto y botones encima (mismo contenido que venías usando) */}
-    <div className="relative z-10 max-w-6xl mx-auto px-4 py-12 md:py-16 grid lg:grid-cols-2 gap-10 items-center h-full">
+    <div className="relative z-10 max-w-6xl mx-auto px-4 py-12 md:py-16 grid lg:grid-cols-2 gap-10 items-center h-full text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.6)]">
       <div className="self-center">
-        <span className="inline-block mb-4 rounded-full px-3 py-1 bg-sky-100 text-sky-700 text-sm">
+        + <span className="inline-block mb-4 rounded-full px-3 py-1 bg-white/25 text-white border border-white/40 text-sm">
           Te ayudamos a vivir experiencias
         </span>
-        <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-4 text-sky-800">
+        <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-4 text-white">
           Viajar bien es viajar <span className="text-sky-600">con nosotros</span>
         </h1>
-        <p className="text-gray-700 mb-6 max-w-prose">
+        <p className="text-white/95 mb-6 max-w-prose">
           En Viama Viajes y Turismo trabajamos con reservas seguras, asesoramiento real y
           acompañamiento antes, durante y después de tu viaje. Atención personalizada y
           propuestas a medida.
@@ -102,7 +100,7 @@ export default function Page() {
             </Button>
           </a>
           <a href="#servicios">
-            <Button variant="outline" size="lg" className="rounded-2xl border-sky-600 text-sky-700 hover:bg-sky-50">
+            <Button variant="outline" size="lg" className="rounded-2xl border-white text-white hover:bg-white/10">
               Ver servicios
             </Button>
           </a>
@@ -111,7 +109,7 @@ export default function Page() {
             target="_blank"
             rel="noreferrer"
           >
-            <Button variant="outline" size="lg" className="rounded-2xl border-green-500 text-green-600 hover:bg-green-50">
+            + <Button variant="outline" size="lg" className="rounded-2xl border-white text-white hover:bg-white/10">
               WhatsApp
             </Button>
           </a>
