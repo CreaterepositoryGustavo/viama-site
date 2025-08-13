@@ -1,10 +1,3 @@
-// === Carrusel: imágenes ===
-const slides = [
-  "/slide1.jpg", // tu foto tropical (colocada en /public/slide1.jpg)
-  "/slide2.jpg", // tu foto del globo (colocada en /public/slide2.jpg)
-  "https://images.unsplash.com/photo-1482192505345-5655af888cc4?q=80&w=1920&auto=format&fit=crop", // montaña/lago (Unsplash)
-];
-
 'use client';
 import React from "react";
 import { Button } from "@/components/ui/button";
@@ -14,6 +7,13 @@ import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 import { Plane, Phone, Mail, MapPin, ArrowRight, ShieldCheck, Star, Instagram } from "lucide-react";
 import Image from "next/image";
+
+// === Carrusel: imágenes ===
+const slides = [
+  "/slide1.jpg", // tu foto tropical (colocada en /public/slide1.jpg)
+  "/slide2.jpg", // tu foto del globo (colocada en /public/slide2.jpg)
+  "https://images.unsplash.com/photo-1482192505345-5655af888cc4?q=80&w=1920&auto=format&fit=crop", // montaña/lago (Unsplash)
+];
 
 const PhoneLink = "https://wa.me/5493412715621?text=Hola%20Viama%2C%20quiero%20una%20cotizaci%C3%B3n%20desde%20la%20web";
 const instagramLink = "https://instagram.com/viama.viajes";
