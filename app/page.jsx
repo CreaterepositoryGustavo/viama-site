@@ -82,7 +82,7 @@ export default function Page() {
     {/* Texto y botones encima (mismo contenido que venías usando) */}
     <div className="relative z-10 max-w-6xl mx-auto px-4 py-12 md:py-16 grid lg:grid-cols-2 gap-10 items-center h-full text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.6)]">
       <div className="self-center">
-        + <span className="inline-block mb-4 rounded-full px-3 py-1 bg-white/25 text-white border border-white/40 text-sm">
+         <span className="inline-block mb-4 rounded-full px-3 py-1 bg-white/25 text-white border border-white/40 text-sm">
           Te ayudamos a vivir experiencias
         </span>
         <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-4 text-white">
