@@ -88,6 +88,8 @@ export default function Page() {
         <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-4 text-white">
           Viajar bien es viajar <span className="text-sky-600">con nosotros</span>
         </h1>
+       <div className="relative z-10">
+  <div className="absolute inset-0 -left-4 -right-4 bg-gradient-to-r from-black/40 to-transparent pointer-events-none rounded-2xl" />
         <p className="text-white/95 mb-6 max-w-prose">
           En Viama Viajes y Turismo trabajamos con reservas seguras, asesoramiento real y
           acompañamiento antes, durante y después de tu viaje. Atención personalizada y
