@@ -20,6 +20,13 @@ const PhoneLink = "https://wa.me/5493412715621?text=Hola%20Viama%2C%20quiero%20u
 const instagramLink = "https://instagram.com/viama.viajes";
 
 export default function Page() {
+    // Estado y temporizador del carrusel
+  const [idx, setIdx] = React.useState(0);
+  React.useEffect(() => {
+    const id = setInterval(() => setIdx(i => (i + 1) % slides.length), 6000); // cambia cada 6s
+    return () => clearInterval(id);
+  }, []);
+
   return (
     <div className="min-h-screen text-gray-900">
       {/* NAVBAR */}
